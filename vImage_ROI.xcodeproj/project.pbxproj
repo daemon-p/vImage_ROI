@@ -11,6 +11,7 @@
 		91DF85E423E6AD96006F7D6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DF85E323E6AD96006F7D6D /* ViewController.swift */; };
 		91DF85E623E6AD9C006F7D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DF85E523E6AD9C006F7D6D /* Assets.xcassets */; };
 		91DF85E923E6AD9C006F7D6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91DF85E723E6AD9C006F7D6D /* Main.storyboard */; };
+		91DF85F223E6AEC0006F7D6D /* ROI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DF85F123E6AEC0006F7D6D /* ROI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		91DF85E823E6AD9C006F7D6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91DF85EA23E6AD9C006F7D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91DF85EB23E6AD9C006F7D6D /* vImage_ROI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vImage_ROI.entitlements; sourceTree = "<group>"; };
+		91DF85F123E6AEC0006F7D6D /* ROI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				91DF85E123E6AD96006F7D6D /* AppDelegate.swift */,
 				91DF85E323E6AD96006F7D6D /* ViewController.swift */,
+				91DF85F123E6AEC0006F7D6D /* ROI.swift */,
 				91DF85E523E6AD9C006F7D6D /* Assets.xcassets */,
 				91DF85E723E6AD9C006F7D6D /* Main.storyboard */,
 				91DF85EA23E6AD9C006F7D6D /* Info.plist */,
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DF85F223E6AEC0006F7D6D /* ROI.swift in Sources */,
 				91DF85E423E6AD96006F7D6D /* ViewController.swift in Sources */,
 				91DF85E223E6AD96006F7D6D /* AppDelegate.swift in Sources */,
 			);
