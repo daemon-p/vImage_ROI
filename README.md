@@ -11,31 +11,31 @@
 	
 		 	@discardableResult
 			func vImageBuffer_CropRGBA8888(_ src: vImageBuffer, _ des: vImageBuffer, _ roi: CGRect) -> vImage_Error {
-	
-		    let bufferWidth = Int(src.pointee.width)
-		    let bufferHeight = Int(src.pointee.height)
-	
-	        /// validate roi
-	   		let roi = roi.intersection(CGRect(x: 0, y: 0, width: bufferWidth, height: bufferHeight))
-	
-	   		/// calculate pixels in roi
-	   		/// start: ths first pixel at the topleft in roi
-	   		let bytesPerPixel = 4
-		    let start = Int(roi.minY) * src.pointee.rowBytes + Int(roi.minX) * bytesPerPixel
-	
-	    	/// fill pixels in desBuffer
-	    	/// WARNING: the image data shared between srcBuffer and desBuffer, NOT COPY
-	    	/// so we should call `free(srcBuffer.data) only`
-	   		defer {
-	       	    des.pointee.rowBytes = src.pointee.rowBytes
-	       	    des.pointee.data = src.pointee.data.advanced(by: start)
-	    	}
-	    
-	    	return vImageBuffer_Init(des,
-		                      .init(roi.height),
-		                      .init(roi.width),
-		                      32,
-		                      .init(kvImageNoFlags))
+    	
+    		    let bufferWidth = Int(src.pointee.width)
+    		    let bufferHeight = Int(src.pointee.height)
+    	
+    	        /// validate roi
+    	   		let roi = roi.intersection(CGRect(x: 0, y: 0, width: bufferWidth, height: bufferHeight))
+    	
+    	   		/// calculate pixels in roi
+    	   		/// start: ths first pixel at the topleft in roi
+    	   		let bytesPerPixel = 4
+    		    let start = Int(roi.minY) * src.pointee.rowBytes + Int(roi.minX) * bytesPerPixel
+    	
+    	    	/// fill pixels in desBuffer
+    	    	/// WARNING: the image data shared between srcBuffer and desBuffer, NOT COPY
+    	    	/// so we should call `free(srcBuffer.data) only`
+    	   		defer {
+    	       	    des.pointee.rowBytes = src.pointee.rowBytes
+    	       	    des.pointee.data = src.pointee.data.advanced(by: start)
+    	    	}
+    	    
+    	    	return vImageBuffer_Init(des,
+    		                      .init(roi.height),
+    		                      .init(roi.width),
+    		                      32,
+    		                      .init(kvImageNoFlags))
 		    
 			}
 	
@@ -88,8 +88,8 @@
 
 		```
 		defer {
-           sourceBuffer.free()
-           /// DO NOT CALL 
-           /// destinationBuffer.free()
+            sourceBuffer.free()
+            /// DO NOT CALL 
+            /// destinationBuffer.free()
         }
 		```
